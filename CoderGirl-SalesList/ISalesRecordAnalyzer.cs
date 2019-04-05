@@ -25,14 +25,14 @@ namespace CoderGirl_SalesList
         /// </summary>
         /// <param name="salesRecords"></param>
         /// <returns></returns>
-        decimal GetMaxProfit(List<SalesRecord> salesRecords);
+        double GetMaxProfit(List<SalesRecord> salesRecords);
 
         /// <summary>
         /// Returns the Sum of the TotalRevenue of all Sales Records
         /// </summary>
         /// <param name="salesRecords"></param>
         /// <returns></returns>
-        decimal GetTotalRevenue(List<SalesRecord> salesRecords);
+        double GetTotalRevenue(List<SalesRecord> salesRecords);
 
         /// <summary>
         /// Returns list of SalesRecords ordered by ShipDate in ascending order

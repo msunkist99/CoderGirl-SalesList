@@ -40,10 +40,10 @@ namespace CoderGirl_SalesList
             x = factory.SalesRecordAnalyzer.AreOrderDatesBefore(new DateTime(2017, 07, 27), salesRecords);
             Console.WriteLine($"Orders before 07/27/2017 {x}");
 
-            decimal maxProfit = factory.SalesRecordAnalyzer.GetMaxProfit(salesRecords);
+            double maxProfit = factory.SalesRecordAnalyzer.GetMaxProfit(salesRecords);
             Console.WriteLine($"Max profit {maxProfit:C}");
 
-            decimal sumTotalRevenue = factory.SalesRecordAnalyzer.GetTotalRevenue(salesRecords);
+            double sumTotalRevenue = factory.SalesRecordAnalyzer.GetTotalRevenue(salesRecords);
             Console.WriteLine($"Total revenue {sumTotalRevenue:C}");
 
             List<SalesRecord> salesRecordsByOrderDate = factory.SalesRecordAnalyzer.OrderByShipDate(salesRecords);

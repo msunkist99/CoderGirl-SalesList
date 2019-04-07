@@ -14,11 +14,11 @@ namespace CoderGirl_SalesList
 
         public string OrderId { get; set; }
         public DateTime ShipDate { get; set; }
-        public int UnitsSold { get; set; }
-        public double UnitPrice { get; set; }
-        public double UnitCost { get; set; }
-        public double TotalRevenue { get; set; }
-        public double TotalCost { get; set; }
-        public double TotalProfit { get; set; }
+        public double UnitsSold { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal UnitCost { get; set; }
+        public decimal TotalRevenue { get; set; }
+        public decimal TotalCost { get; set; }
+        public decimal TotalProfit { get; set; }
     }
 }

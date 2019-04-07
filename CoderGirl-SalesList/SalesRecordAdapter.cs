@@ -41,11 +41,11 @@ namespace CoderGirl_SalesList
                     salesRecord.OrderId = (columns[6]);
                     salesRecord.ShipDate = DateTime.Parse(columns[7]);
                     salesRecord.UnitsSold = int.Parse(columns[8]);
-                    salesRecord.UnitPrice = double.Parse(columns[9]);
-                    salesRecord.UnitCost = double.Parse(columns[10]);
-                    salesRecord.TotalRevenue = double.Parse(columns[11]);
-                    salesRecord.TotalCost = double.Parse(columns[12]);
-                    salesRecord.TotalProfit = double.Parse(columns[13]);
+                    salesRecord.UnitPrice = decimal.Parse(columns[9]);
+                    salesRecord.UnitCost = decimal.Parse(columns[10]);
+                    salesRecord.TotalRevenue = decimal.Parse(columns[11]);
+                    salesRecord.TotalCost = decimal.Parse(columns[12]);
+                    salesRecord.TotalProfit = decimal.Parse(columns[13]);
 
                     salesRecords.Add(salesRecord);
                 }

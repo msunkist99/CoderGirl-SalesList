@@ -60,9 +60,9 @@ namespace CoderGirl_SalesList
         /// </summary>
         /// <param name="salesRecords"></param>
         /// <returns></returns>
-        public double GetMaxProfit(List<SalesRecord> salesRecords)
+        public decimal GetMaxProfit(List<SalesRecord> salesRecords)
         {
-            double maxProfit = salesRecords.Select(p => p.TotalProfit).Max();
+            decimal maxProfit = salesRecords.Select(p => p.TotalProfit).Max();
 
             return maxProfit;
         }
@@ -72,9 +72,9 @@ namespace CoderGirl_SalesList
         /// </summary>
         /// <param name="salesRecords"></param>
         /// <returns></returns>
-        public double GetTotalRevenue(List<SalesRecord> salesRecords)
+        public decimal GetTotalRevenue(List<SalesRecord> salesRecords)
         {
-            double totalRevenue = salesRecords.Select(p => p.TotalRevenue).Sum();
+            decimal totalRevenue = salesRecords.Select(p => p.TotalRevenue).Sum();
             return totalRevenue;
         }
 

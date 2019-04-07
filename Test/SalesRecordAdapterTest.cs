@@ -103,10 +103,6 @@ namespace Test
 
         private bool ContainsMatchingData(string testLine, SalesRecord item)
         {
-            if (item.OrderId == "647876489")
-            {
-                Console.WriteLine();
-            }
             string[] expectedData = testLine.Split(",");
             IEnumerable<string> itemProperties = item.GetPropertiesAsStrings();
             IEnumerable<string> missingData = expectedData.Except(itemProperties);
@@ -128,11 +124,6 @@ namespace Test
                     return formattedDate;
                 }
 
-                if(value is double)
-                {
-                    double formattedDouble = (double)value;
-                    return formattedDouble.ToString("0.00");
-                }
                 return value.ToString();
             });
         }

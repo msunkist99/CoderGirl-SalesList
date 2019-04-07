@@ -79,16 +79,16 @@ namespace Test
         {
             List<SalesRecord> salesRecords = new List<SalesRecord>
             {
-                new SalesRecord{TotalProfit = 17.2},
-                new SalesRecord{TotalProfit = 17.0},
-                new SalesRecord{TotalProfit = 0.0},
-                new SalesRecord{TotalProfit = 17.1},
-                new SalesRecord{TotalProfit = 10.0}
+                new SalesRecord{TotalProfit = 17.2M},
+                new SalesRecord{TotalProfit = 17.0M},
+                new SalesRecord{TotalProfit = 0.0M},
+                new SalesRecord{TotalProfit = 17.1M},
+                new SalesRecord{TotalProfit = 10.0M}
             };
 
-            double actual = salesRecordAnalyzer.GetMaxProfit(salesRecords);
+            decimal actual = salesRecordAnalyzer.GetMaxProfit(salesRecords);
 
-            Assert.Equal((double)17.2, actual);
+            Assert.Equal((decimal)17.2, actual);
         }
 
         [Fact]
@@ -96,16 +96,15 @@ namespace Test
         {
             List<SalesRecord> salesRecords = new List<SalesRecord>
             {
-                new SalesRecord{TotalRevenue = 17.2},
-                new SalesRecord{TotalRevenue = 17.0},
-                new SalesRecord{TotalRevenue = 0.0},
-                new SalesRecord{TotalRevenue = 17.1},
-                new SalesRecord{TotalRevenue = 10.0}
+                new SalesRecord{TotalRevenue = 17.2M},
+                new SalesRecord{TotalRevenue = 17.0M},
+                new SalesRecord{TotalRevenue = 0.0M},
+                new SalesRecord{TotalRevenue = 17.1M},
+                new SalesRecord{TotalRevenue = 10.0M}
             };
 
-            double actual = Math.Round( salesRecordAnalyzer.GetTotalRevenue(salesRecords),2);
-
-            Assert.Equal((double)61.30, actual);
+            decimal actual = Math.Round( salesRecordAnalyzer.GetTotalRevenue(salesRecords),2);
+            Assert.Equal((decimal)61.30, actual);
         }
 
         [Fact]
@@ -137,7 +136,7 @@ namespace Test
         [Fact]
         public void TestOrderByUnitsSoldDescending()
         {
-            List<int> expected = new List<int> { 101, 101, 29, 12, 1 };
+            List<double> expected = new List<double> { 101, 101, 29, 12, 1 };
             List<SalesRecord> salesRecords = new List<SalesRecord>
             {
                 new SalesRecord{UnitsSold = 12},
@@ -147,7 +146,7 @@ namespace Test
                 new SalesRecord{UnitsSold = 101}
             };
 
-            List<int> actual = salesRecordAnalyzer.OrderByUnitsSoldDescending(salesRecords)
+            List<double> actual = salesRecordAnalyzer.OrderByUnitsSoldDescending(salesRecords)
                 .Select(record => record.UnitsSold).ToList();
 
             Assert.True(expected.SequenceEqual(actual));
